@@ -1,0 +1,28 @@
+yaml
+name: Node.js CI Pipeline
+# Trigger the pipeline on any push or pull request to the main branch
+on:
+push:
+branches: [ "main" ]
+pull_request:
+branches: [ "main" ]
+jobs:
+build-and-test:
+# Use a fresh, hosted Ubuntu Linux machine
+runs-on: ubuntu-latest
+steps:
+# Step 1: Copy the repository code onto the runner machine
+- name: Checkout Code
+
+uses: actions/checkout@v4
+# Step 2: Set up the specific version of Node.js
+- name: Setup Node.js
+uses: actions/setup-node@v4
+with:
+node-node-version: '20'
+# Step 3: Clean install your project dependencies (Jest)
+- name: Install Dependencies
+run: npm ci
+# Step 4: Run the automated unit tests
+- name: Run Tests
+run: npm test
