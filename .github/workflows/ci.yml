@@ -1,4 +1,4 @@
-yaml
+
 name: Node.js CI Pipeline
 # Trigger the pipeline on any push or pull request to the main branch
 on:
