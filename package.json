@@ -1,12 +1,13 @@
-json
 {
-"name": "devops-ci-demo",
-"version": "1.0.0",
-"scripts": {
-"test": "jest"
-},
-"dependencies": {},
-"devDependencies": {
-"jest": "^29.0.0"
-}
+  "name": "devops-ci-demo",
+  "version": "1.0.0",
+  "description": "Simple Node.js project with Jest and GitHub Actions CI",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
